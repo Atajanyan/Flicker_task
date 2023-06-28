@@ -1,0 +1,113 @@
+body {
+  display: flex;
+  justify-content: center;
+  background: #86007a;
+  background: linear-gradient(90deg, #86007a 0%, #fbe5fa 50%, #7c006e 100%); }
+
+.wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 100px;
+  border: 2px dashed rgba(63, 0, 60, 0.342); }
+  .wrapper h1 {
+    font-size: 55px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: purple; }
+  .wrapper .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; }
+    .wrapper .form__input {
+      max-width: 330px;
+      height: 50px;
+      border-radius: 25px;
+      border: none;
+      padding: 0 20px;
+      font-size: 25px;
+      color: white;
+      text-align: center;
+      background: #f75bea;
+      background: linear-gradient(90deg, #f75bea 0%, #65095e 40%, #55004e 50%, #620a5b 61%, #f977ed 100%); }
+      .wrapper .form__input::placeholder {
+        color: white;
+        opacity: 0.5; }
+    .wrapper .form__button {
+      width: 80px;
+      height: 50px;
+      font-size: 25px;
+      border-radius: 25px;
+      border: none;
+      color: purple;
+      font-weight: bold;
+      background-color: #ffffff;
+      cursor: pointer;
+      animation: border 0.5s linear infinite; }
+
+@keyframes border {
+  from {
+    border: 1px solid purple; }
+  to {
+    border: 5px solid purple; } }
+  .wrapper .img-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px; }
+    .wrapper .img-container__img {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px; }
+      .wrapper .img-container__img--none {
+        display: none; }
+      .wrapper .img-container__img--opacity {
+        opacity: 0.2; }
+  .wrapper .baskets {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px; }
+    .wrapper .baskets .basketContainer {
+      width: 300px;
+      height: 470px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px; }
+      .wrapper .baskets .basketContainer .basket {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+        background-color: purple; }
+        .wrapper .baskets .basketContainer .basket--shadow {
+          box-shadow: 0px -8px 3px white; }
+      .wrapper .baskets .basketContainer .basketImages {
+        width: 100%;
+        height: 320px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #fdb2e7;
+        border-radius: 25px;
+        padding: 10px 0;
+        gap: 10px;
+        visibility: hidden; }
+        .wrapper .baskets .basketContainer .basketImages--hide {
+          visibility: visible; }
