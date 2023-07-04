@@ -34,7 +34,7 @@ function dragLeaveHandler(e) {
   e.target.classList.remove("basket--shadow");
 }
 
-function dropHandler(e, elem) {
+function  dropHandler(e, elem) {
   e.preventDefault();
   e.target.classList.remove("basket--shadow");
 
@@ -104,6 +104,7 @@ function search(e) {
 
   function processResponse(response, index) {
 
+    response.name = tags[index];
     responses.push(response.photos?.photo?.map((img) => {
       return {
         id: img.id + Math.random(),
@@ -117,8 +118,6 @@ function search(e) {
     if (!response.photos.photo.length && responses.length < 2) {
       img_container.textContent = 'No Search Result';
     }
-
-    response.name = tags[index];
 
     if (response.photos.photo.length) {
       img_container.textContent = ''
@@ -135,11 +134,11 @@ function search(e) {
       basketContainer.append(basket, basketImages);
       baskets.append(basketContainer);
 
-      basket.ondragleave = (e) => {dragLeaveHandler(e)};
-      basket.ondragend = (e) => {dragEndHandler(e)};
-      basket.ondragenter = (e) => {dragEnterHandler(e)};
-      basket.ondragover = (e) => {e.preventDefault()};
-      basket.ondrop = (e) => {dropHandler(e, basketImages)};
+      basket.ondragleave = (e) => dragLeaveHandler(e);
+      basket.ondragend = (e) => dragEndHandler(e);
+      basket.ondragenter = (e) => dragEnterHandler(e);
+      basket.ondragover = (e) => e.preventDefault();
+      basket.ondrop = (e) => dropHandler(e, basketImages);
 
       basket.addEventListener("click", (e) => {
         e.stopPropagation();
